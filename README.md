@@ -15,7 +15,7 @@ Everything runs locally — your passwords and keys never leave your machine.
 
 </div>
 
-\---
+---
 
 ## ✨ Features
 
@@ -28,7 +28,7 @@ Everything runs locally — your passwords and keys never leave your machine.
 * 🛡️ **Dry-Run Mode** — Preview before touching your VPS
 * 🔄 **Idempotent** — Safe to re-run
 
-\---
+---
 
 ## 📸 Preview
 
@@ -52,7 +52,7 @@ SSH private key: C:\\Users\\you\\AppData\\Roaming\\VPS-Builder\\keys\\1.2.3.4\_V
 Hysteria client: C:\\Users\\you\\AppData\\Roaming\\VPS-Builder\\clients\\1.2.3.4\_hysteria.yaml
 ```
 
-\---
+---
 
 ## 📋 Requirements
 
@@ -104,7 +104,7 @@ Hysteria client: C:\\Users\\you\\AppData\\Roaming\\VPS-Builder\\clients\\1.2.3.4
 >
 > A KVM VPS can run Debian, Ubuntu, CentOS, or any Linux distro. This tool requires the combo of \*\*"KVM virtualization + Debian/Ubuntu OS"\*\*.
 
-\---
+---
 
 ## 🚀 Quick Start
 
@@ -173,7 +173,7 @@ Structure:
 ssh -i "$env:APPDATA\\VPS-Builder\\keys\\1.2.3.4\_VPS-Builder-Key" -p 2222 root@1.2.3.4
 ```
 
-\---
+---
 
 ## 🛠️ Command Reference
 
@@ -190,7 +190,7 @@ ssh -i "$env:APPDATA\\VPS-Builder\\keys\\1.2.3.4\_VPS-Builder-Key" -p 2222 root@
 
 * `VPS\_BUILDER\_ROOT\_PASSWORD` — Preset SSH password (use `--ask-password` for better security)
 
-\---
+---
 
 ## 🌐 Recommended VPS Providers
 
@@ -296,7 +296,7 @@ In the control panel's "Reinstall OS":
 
 #### Step 4: Save the root password → Use it in VPS-Builder
 
-\---
+---
 
 ## 📱 Client Apps
 
@@ -310,7 +310,7 @@ After deployment you'll get a Hysteria 2 client config at `%APPDATA%\\VPS-Builde
 |Android|[NekoBox for Android](https://github.com/MatsuriDayo/NekoBoxForAndroid), [Clash Meta for Android](https://github.com/MetaCubeX/ClashMetaForAndroid)|
 |CLI|[Official Hysteria Client](https://github.com/apernet/hysteria)|
 
-\---
+---
 
 ## 🔒 Security Notes
 
@@ -320,7 +320,7 @@ After deployment you'll get a Hysteria 2 client config at `%APPDATA%\\VPS-Builde
 * ❌ Avoid default ports (defaults already moved to 2222 / 8443)
 * ✅ Back up your `%APPDATA%\\VPS-Builder\\` folder
 
-\---
+---
 
 ## ❓ FAQ
 
@@ -362,7 +362,7 @@ Not recommended. Run `init` separately for each VPS to avoid key/IP confusion.
 
 </details>
 
-\---
+---
 
 ## 🤝 Contributing
 
@@ -375,7 +375,7 @@ go mod tidy
 go test ./...
 ```
 
-\---
+---
 
 ## 📜 License
 
@@ -387,7 +387,7 @@ If this project helps you, please give it a star ⭐!
 
 
 
-\---
+---
 
 <div align="center">
 
@@ -395,11 +395,11 @@ If this project helps you, please give it a star ⭐!
 
 </div>
 
-\---
+---
 
 ## ⚖️ Disclaimer
 
 This tool is for educational and lawful use only. Users are responsible for complying with local laws. The author is not liable for misuse.
 
-\---
+---
 
