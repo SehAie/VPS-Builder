@@ -15,6 +15,9 @@ Everything runs locally — your passwords and keys never leave your machine.
 
 </div>
 
+## Related Repositories
+[ClashVerge-MultiScript](https://github.com/SehAie/ClashVerge-MultiScript) - 🎓 Override script for CN campus network, academic databases, AI services & game accelerator coexistence
+
 ---
 
 ## ✨ Features
