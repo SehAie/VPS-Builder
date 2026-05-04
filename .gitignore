@@ -1,0 +1,15 @@
+# Build outputs
+bin/
+dist/
+*.exe
+*.test
+
+# Local runtime data
+.vps-auto-kit/
+config.local.yaml
+*.log
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
