@@ -7,12 +7,6 @@
 A Windows CLI tool that bootstraps your Debian/Ubuntu VPS and deploys Hysteria 2 in minutes.
 Everything runs locally — your passwords and keys never leave your machine.
 
-[!\[Release](https://img.shields.io/github/v/release/SehAie/VPS-Builder?style=flat-square)](https://github.com/SehAie/VPS-Builder/releases)
-[!\[License](https://img.shields.io/github/license/SehAie/VPS-Builder?style=flat-square)](LICENSE)
-[!\[Go Version](https://img.shields.io/github/go-mod/go-version/SehAie/VPS-Builder?style=flat-square)](go.mod)
-[!\[Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-blue?style=flat-square)](https://github.com/SehAie/VPS-Builder)
-[!\[Stars](https://img.shields.io/github/stars/SehAie/VPS-Builder?style=flat-square)](https://github.com/SehAie/VPS-Builder/stargazers)
-
 ### 🌍 Language / 语言
 
 **🇬🇧 English (current)** · [🇨🇳 简体中文](./README_zh.md)
