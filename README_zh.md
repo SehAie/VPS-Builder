@@ -14,6 +14,9 @@
 
 </div>
 
+## Related Repositories
+[ClashVerge-MultiScript](https://github.com/SehAie/ClashVerge-MultiScript) - 🎓 自建节点 + 多场景覆写脚本：校园网认证 + 学术数据库 + 国内外AI分流 + 加速器共存方案
+
 ---
 
 ## ✨ 项目特色
