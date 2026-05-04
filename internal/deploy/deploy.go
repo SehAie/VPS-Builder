@@ -38,7 +38,7 @@ func Run(cfg config.Config, opt Options) (Result, error) {
 		password = opt.RootPassword
 	}
 	if strings.TrimSpace(password) == "" {
-		return Result{}, fmt.Errorf("missing root password: pass --ask-password or set VAKIT_ROOT_PASSWORD")
+		return Result{}, fmt.Errorf("missing root password: pass --ask-password or set VPS_BUILDER_ROOT_PASSWORD")
 	}
 
 	hyPass := cfg.Hysteria.Password
@@ -158,8 +158,8 @@ touch /root/.ssh/authorized_keys
 chmod 600 /root/.ssh/authorized_keys
 grep -qxF %[1]q /root/.ssh/authorized_keys || echo %[1]q >> /root/.ssh/authorized_keys
 install -d -m 755 /etc/ssh/sshd_config.d
-if [ -f /etc/ssh/sshd_config.d/vps-auto-kit.conf ]; then cp /etc/ssh/sshd_config.d/vps-auto-kit.conf /etc/ssh/sshd_config.d/vps-auto-kit.conf.bak.$(date +%%s); fi
-cat > /etc/ssh/sshd_config.d/vps-auto-kit.conf <<'REMOTE_EOF'
+if [ -f /etc/ssh/sshd_config.d/VPS-Builder.conf ]; then cp /etc/ssh/sshd_config.d/VPS-Builder.conf /etc/ssh/sshd_config.d/VPS-Builder.conf.bak.$(date +%%s); fi
+cat > /etc/ssh/sshd_config.d/VPS-Builder.conf <<'REMOTE_EOF'
 Port %[2]d
 PermitRootLogin %[3]s
 PasswordAuthentication %[4]s
@@ -180,7 +180,7 @@ systemctl restart ssh || systemctl restart sshd
 
 func rollbackSSHScript() string {
 	return `set +e
-rm -f /etc/ssh/sshd_config.d/vps-auto-kit.conf
+rm -f /etc/ssh/sshd_config.d/VPS-Builder.conf
 systemctl restart ssh || systemctl restart sshd
 `
 }
@@ -203,7 +203,7 @@ net.ipv4.tcp_congestion_control = bbr
 `
 	}
 	return fmt.Sprintf(`set -e
-cat > /etc/sysctl.d/99-vps-auto-kit.conf <<'REMOTE_EOF'
+cat > /etc/sysctl.d/99-VPS-Builder.conf <<'REMOTE_EOF'
 %[1]s
 # === Buffers ===
 net.core.rmem_max = 16777216
@@ -243,7 +243,7 @@ net.ipv4.conf.all.accept_source_route = 0
 net.ipv4.conf.default.accept_source_route = 0
 %[2]s
 REMOTE_EOF
-sysctl -p /etc/sysctl.d/99-vps-auto-kit.conf
+sysctl -p /etc/sysctl.d/99-VPS-Builder.conf
 `, bbr, ipv6)
 }
 

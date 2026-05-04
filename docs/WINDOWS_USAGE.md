@@ -5,7 +5,7 @@
 Go to the project directory:
 
 ```powershell
-cd "D:\your\path\vps-auto-kit-github-ready"
+cd "D:\your\path\VPS-Builder-github-ready"
 ```
 
 ## 2. Build the exe
@@ -13,7 +13,7 @@ cd "D:\your\path\vps-auto-kit-github-ready"
 ```powershell
 go mod tidy
 go test ./...
-go build -o vps-auto-kit.exe ./cmd/vps-auto-kit
+go build -o VPS-Builder.exe ./cmd/VPS-Builder
 ```
 
 Or build release files:
@@ -26,7 +26,7 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 ## 3. Create a config file
 
 ```powershell
-.\vps-auto-kit.exe init -o config.yaml
+.\VPS-Builder.exe init -o config.yaml
 ```
 
 You can edit the config manually:
@@ -50,13 +50,13 @@ If you changed the ports in `config.yaml`, open your custom ports instead.
 ## 5. Dry run
 
 ```powershell
-.\vps-auto-kit.exe deploy -c config.yaml --dry-run --ask-password
+.\VPS-Builder.exe deploy -c config.yaml --dry-run --ask-password
 ```
 
 ## 6. Deploy
 
 ```powershell
-.\vps-auto-kit.exe deploy -c config.yaml --ask-password
+.\VPS-Builder.exe deploy -c config.yaml --ask-password
 ```
 
 Type `yes` when asked to confirm.
@@ -64,7 +64,7 @@ Type `yes` when asked to confirm.
 ## 7. Find local output files
 
 ```powershell
-explorer $env:APPDATA\vps-auto-kit
+explorer $env:APPDATA\VPS-Builder
 ```
 
 ## 8. SSH login after deployment
@@ -72,7 +72,7 @@ explorer $env:APPDATA\vps-auto-kit
 Example:
 
 ```powershell
-ssh -i "$env:APPDATA\vps-auto-kit\keys\1.2.3.4_vps-auto-key" -p 2222 root@1.2.3.4
+ssh -i "$env:APPDATA\VPS-Builder\keys\1.2.3.4_VPS-Builder-Key" -p 2222 root@1.2.3.4
 ```
 
 Replace `1.2.3.4` with your real VPS IP.

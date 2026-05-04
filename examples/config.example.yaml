@@ -1,4 +1,4 @@
-project_name: vps-auto-kit-windows
+project_name: VPS-Builder
 
 server:
   ip: "1.2.3.4"
@@ -8,7 +8,7 @@ server:
 
 ssh:
   new_port: 2222
-  key_name: "vps-auto-key"
+  key_name: "VPS-Builder-Key"
   disable_password_login: true
   permit_root_login: "prohibit-password"
   max_auth_tries: 3

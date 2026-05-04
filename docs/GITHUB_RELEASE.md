@@ -54,9 +54,9 @@ Then open the GitHub repository, go to Actions, and wait for the release workflo
 
 The generated release will include:
 
-- `vps-auto-kit-windows-amd64.exe`
-- `vps-auto-kit-windows-arm64.exe`
-- `vps-auto-kit-windows-amd64.zip`
-- `vps-auto-kit-windows-arm64.zip`
+- `VPS-Builder-windows-amd64.exe`
+- `VPS-Builder-windows-arm64.exe`
+- `VPS-Builder-windows-amd64.zip`
+- `VPS-Builder-windows-arm64.zip`
 - `SHA256SUMS.txt`
 

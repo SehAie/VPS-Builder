@@ -14,7 +14,7 @@ import (
 	"golang.org/x/term"
 )
 
-const version = "0.1.2-windows"
+const version = "0.1.3-windows"
 
 func main() {
 	if runtime.GOOS != "windows" {
@@ -34,7 +34,7 @@ func main() {
 	case "gen-client":
 		cmdGenClient(os.Args[2:])
 	case "version":
-		fmt.Println("vps-auto-kit", version)
+		fmt.Println("VPS-Builder", version)
 	default:
 		usage()
 		os.Exit(2)
@@ -42,17 +42,17 @@ func main() {
 }
 
 func usage() {
-	fmt.Print(`vps-auto-kit-windows - free open-source VPS bootstrap + Hysteria 2 deployer
+	fmt.Print(`VPS-Builder - free open-source VPS bootstrap + Hysteria 2 deployer
 
 Usage on Windows PowerShell:
-  .\vps-auto-kit.exe init -o config.yaml
-  .\vps-auto-kit.exe deploy -c config.yaml --ask-password
-  .\vps-auto-kit.exe deploy -c config.yaml --dry-run --ask-password
-  .\vps-auto-kit.exe gen-client -c config.yaml -p HYSTERIA_PASSWORD
-  .\vps-auto-kit.exe version
+  .\VPS-Builder.exe init -o config.yaml
+  .\VPS-Builder.exe deploy -c config.yaml --ask-password
+  .\VPS-Builder.exe deploy -c config.yaml --dry-run --ask-password
+  .\VPS-Builder.exe gen-client -c config.yaml -p HYSTERIA_PASSWORD
+  .\VPS-Builder.exe version
 
 Environment:
-  VAKIT_ROOT_PASSWORD    Initial VPS SSH password. Prefer --ask-password.
+  VPS_BUILDER_ROOT_PASSWORD    Initial VPS SSH password. Prefer --ask-password.
 `)
 }
 
@@ -65,7 +65,7 @@ func cmdInit(args []string) {
 	fatalIf(err)
 	fatalIf(config.Save(*out, cfg))
 	fmt.Println("Config file generated:", *out)
-	fmt.Println("Next step: .\\vps-auto-kit.exe deploy -c", *out, "--ask-password")
+	fmt.Println("Next step: .\\VPS-Builder.exe deploy -c", *out, "--ask-password")
 }
 
 func cmdDeploy(args []string) {
@@ -79,7 +79,7 @@ func cmdDeploy(args []string) {
 	cfg, err := config.Load(*cfgPath)
 	fatalIf(err)
 
-	pw := os.Getenv("VAKIT_ROOT_PASSWORD")
+	pw := os.Getenv("VPS_BUILDER_ROOT_PASSWORD")
 	if *askPassword {
 		fmt.Print("Enter current VPS SSH/root password: ")
 		b, _ := term.ReadPassword(int(os.Stdin.Fd()))

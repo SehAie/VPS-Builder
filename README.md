@@ -1,4 +1,4 @@
-# VPS Builder / vps-auto-kit Windows
+# VPS Builder / VPS-Builder Windows
 
 A free and open-source Windows CLI tool for bootstrapping a Debian/Ubuntu VPS and deploying Hysteria 2.
 
@@ -43,7 +43,7 @@ Remote VPS:
 ```powershell
 go mod tidy
 go test ./...
-go build -o vps-auto-kit.exe ./cmd/vps-auto-kit
+go build -o VPS-Builder.exe ./cmd/VPS-Builder
 ```
 
 Or use the provided script:
@@ -60,19 +60,19 @@ Release files will be generated in `dist/`.
 Generate a config file:
 
 ```powershell
-.\vps-auto-kit.exe init -o config.yaml
+.\VPS-Builder.exe init -o config.yaml
 ```
 
 Preview the deployment without changing the VPS:
 
 ```powershell
-.\vps-auto-kit.exe deploy -c config.yaml --dry-run --ask-password
+.\VPS-Builder.exe deploy -c config.yaml --dry-run --ask-password
 ```
 
 Deploy:
 
 ```powershell
-.\vps-auto-kit.exe deploy -c config.yaml --ask-password
+.\VPS-Builder.exe deploy -c config.yaml --ask-password
 ```
 
 The tool will ask for your current VPS SSH/root password. The password is not saved to `config.yaml`.
@@ -82,14 +82,14 @@ The tool will ask for your current VPS SSH/root password. The password is not sa
 By default, files are saved under:
 
 ```powershell
-explorer $env:APPDATA\vps-auto-kit
+explorer $env:APPDATA\VPS-Builder
 ```
 
 Typical files:
 
 ```text
-keys\<IP>_vps-auto-key
-keys\<IP>_vps-auto-key.pub
+keys\<IP>_VPS-Builder-Key
+keys\<IP>_VPS-Builder-Key.pub
 clients\<IP>_hysteria.yaml
 last-deploy-summary.txt
 ```
@@ -105,8 +105,8 @@ git push origin v0.1.0
 
 The workflow uploads:
 
-- `vps-auto-kit-windows-amd64.exe`
-- `vps-auto-kit-windows-arm64.exe`
+- `VPS-Builder-windows-amd64.exe`
+- `VPS-Builder-windows-arm64.exe`
 - ZIP packages
 - `SHA256SUMS.txt`
 

@@ -6,7 +6,7 @@ param(
 $ErrorActionPreference = "Stop"
 
 if ($ModulePath -notmatch '^github\.com/[^/]+/[^/]+$') {
-  throw "ModulePath should look like github.com/yourname/vps-auto-kit"
+  throw "ModulePath should look like github.com/yourname/VPS-Builder"
 }
 
 if (-not (Get-Command go -ErrorAction SilentlyContinue)) {
@@ -14,7 +14,7 @@ if (-not (Get-Command go -ErrorAction SilentlyContinue)) {
 }
 
 $oldPaths = @(
-  "github.com/example/vps-auto-kit",
+  "github.com/example/VPS-Builder",
   "github.com/SehAie/VPS-Builder"
 )
 

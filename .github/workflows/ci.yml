@@ -30,10 +30,10 @@ jobs:
         shell: pwsh
         run: |
           New-Item -ItemType Directory -Force -Path dist | Out-Null
-          go build -o dist/vps-auto-kit-windows-amd64.exe ./cmd/vps-auto-kit
+          go build -o dist/VPS-Builder-windows-amd64.exe ./cmd/VPS-Builder
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
-          name: vps-auto-kit-windows-amd64
-          path: dist/vps-auto-kit-windows-amd64.exe
+          name: VPS-Builder-windows-amd64
+          path: dist/VPS-Builder-windows-amd64.exe

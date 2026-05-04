@@ -39,7 +39,7 @@ func WriteSummary(cfg config.Config, password string) error {
 		return err
 	}
 	path := filepath.Join(cfg.Paths.BaseDir, "last-deploy-summary.txt")
-	body := fmt.Sprintf(`vps-auto-kit deployment summary
+	body := fmt.Sprintf(`VPS-Builder deployment summary
 
 Server IP: %s
 SSH user: %s

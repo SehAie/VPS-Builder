@@ -15,7 +15,7 @@ func Run() (config.Config, error) {
 	cfg := config.Default()
 	r := bufio.NewReader(os.Stdin)
 
-	fmt.Println("vps-auto-kit Windows init wizard")
+	fmt.Println("VPS-Builder Windows init wizard")
 	fmt.Println("Tip: the initial SSH/root password is not saved into the config file. Use --ask-password during deploy.")
 	fmt.Println()
 

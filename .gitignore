@@ -5,7 +5,7 @@ dist/
 *.test
 
 # Local runtime data
-.vps-auto-kit/
+.VPS-Builder/
 config.local.yaml
 *.log
 

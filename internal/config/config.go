@@ -25,7 +25,7 @@ type ServerConfig struct {
 	IP       string `yaml:"ip"`
 	User     string `yaml:"user"`
 	OldPort  int    `yaml:"old_port"`
-	Password string `yaml:"password,omitempty"` // Not recommended. Prefer prompt or env VAKIT_ROOT_PASSWORD.
+	Password string `yaml:"password,omitempty"` // Not recommended. Prefer prompt or env VPS_BUILDER_ROOT_PASSWORD.
 }
 
 type SSHConfig struct {
@@ -67,14 +67,14 @@ type PathsConfig struct {
 func Default() Config {
 	base := defaultBaseDir()
 	return Config{
-		ProjectName: "vps-auto-kit-windows",
+		ProjectName: "VPS-Builder",
 		Server: ServerConfig{
 			User:    "root",
 			OldPort: 22,
 		},
 		SSH: SSHConfig{
 			NewPort:              2222,
-			KeyName:              "vps-auto-key",
+			KeyName:              "VPS-Builder-Key",
 			DisablePasswordLogin: true,
 			PermitRootLogin:      "prohibit-password",
 			MaxAuthTries:         3,
@@ -106,13 +106,13 @@ func Default() Config {
 func defaultBaseDir() string {
 	if runtime.GOOS == "windows" {
 		if v := os.Getenv("APPDATA"); v != "" {
-			return filepath.Join(v, "vps-auto-kit")
+			return filepath.Join(v, "VPS-Builder")
 		}
 	}
 	if v := os.Getenv("HOME"); v != "" {
-		return filepath.Join(v, ".vps-auto-kit")
+		return filepath.Join(v, ".VPS-Builder")
 	}
-	return ".vps-auto-kit"
+	return ".VPS-Builder"
 }
 
 func Load(path string) (Config, error) {
