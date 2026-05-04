@@ -1,16 +1,10 @@
-﻿<div align="center">
+<div align="center">
 
 # 🚀 VPS-Builder
 
 **一键部署 Hysteria 2 的 Windows 命令行工具**
 
 在 Windows 本地运行，远程 VPS 自动安装、加固、优化，5 分钟搞定科学上网节点
-
-[![Release](https://img.shields.io/github/v/release/SehAie/VPS-Builder?style=flat-square)](https://github.com/SehAie/VPS-Builder/releases)
-[![License](https://img.shields.io/github/license/SehAie/VPS-Builder?style=flat-square)](LICENSE)
-[![Go Version](https://img.shields.io/github/go-mod/go-version/SehAie/VPS-Builder?style=flat-square)](go.mod)
-[![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-blue?style=flat-square)](https://github.com/SehAie/VPS-Builder)
-[![Stars](https://img.shields.io/github/stars/SehAie/VPS-Builder?style=flat-square)](https://github.com/SehAie/VPS-Builder/stargazers)
 
 ### 🌍 语言 / Language
 
